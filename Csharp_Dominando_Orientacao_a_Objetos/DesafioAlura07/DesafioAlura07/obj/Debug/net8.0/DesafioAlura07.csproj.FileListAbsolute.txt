@@ -1,0 +1,14 @@
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\bin\Debug\net8.0\DesafioAlura07.exe
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\bin\Debug\net8.0\DesafioAlura07.deps.json
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\bin\Debug\net8.0\DesafioAlura07.runtimeconfig.json
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\bin\Debug\net8.0\DesafioAlura07.dll
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\bin\Debug\net8.0\DesafioAlura07.pdb
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\DesafioAlura07.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\DesafioAlura07.AssemblyInfoInputs.cache
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\DesafioAlura07.AssemblyInfo.cs
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\DesafioAlura07.csproj.CoreCompileInputs.cache
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\DesafioAlura07.dll
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\refint\DesafioAlura07.dll
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\DesafioAlura07.pdb
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\DesafioAlura07.genruntimeconfig.cache
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_Dominando_Orientacao_a_Objetos\DesafioAlura07\DesafioAlura07\obj\Debug\net8.0\ref\DesafioAlura07.dll

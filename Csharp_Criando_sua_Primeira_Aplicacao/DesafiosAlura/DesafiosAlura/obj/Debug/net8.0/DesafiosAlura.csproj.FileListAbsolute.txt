@@ -1,0 +1,14 @@
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\bin\Debug\net8.0\DesafiosAlura.exe
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\bin\Debug\net8.0\DesafiosAlura.deps.json
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\bin\Debug\net8.0\DesafiosAlura.runtimeconfig.json
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\bin\Debug\net8.0\DesafiosAlura.dll
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\bin\Debug\net8.0\DesafiosAlura.pdb
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\DesafiosAlura.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\DesafiosAlura.AssemblyInfoInputs.cache
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\DesafiosAlura.AssemblyInfo.cs
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\DesafiosAlura.csproj.CoreCompileInputs.cache
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\DesafiosAlura.dll
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\refint\DesafiosAlura.dll
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\DesafiosAlura.pdb
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\DesafiosAlura.genruntimeconfig.cache
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\DesafiosAlura\DesafiosAlura\obj\Debug\net8.0\ref\DesafiosAlura.dll

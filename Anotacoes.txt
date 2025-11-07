@@ -1,0 +1,1 @@
+ Trata-se do .NET CLI, que significa Command Line Interface (Interface de Linha de Comando). Essa ferramenta permite que digitemos comandos diretamente no terminal.
