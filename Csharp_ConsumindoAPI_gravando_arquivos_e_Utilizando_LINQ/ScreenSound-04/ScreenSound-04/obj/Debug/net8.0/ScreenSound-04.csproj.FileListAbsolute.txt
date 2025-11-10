@@ -12,3 +12,4 @@ C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_ConsumindoAPI_gravando_
 C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_ConsumindoAPI_gravando_arquivos_e_Utilizando_LINQ\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ScreenSound-04.pdb
 C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_ConsumindoAPI_gravando_arquivos_e_Utilizando_LINQ\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ScreenSound-04.genruntimeconfig.cache
 C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_ConsumindoAPI_gravando_arquivos_e_Utilizando_LINQ\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ref\ScreenSound-04.dll
+C:\Users\Arielson\Documents\Alura\Carreira Csharp\Csharp_ConsumindoAPI_gravando_arquivos_e_Utilizando_LINQ\ScreenSound-04\ScreenSound-04\obj\Debug\net8.0\ScreenSound-04.sourcelink.json
