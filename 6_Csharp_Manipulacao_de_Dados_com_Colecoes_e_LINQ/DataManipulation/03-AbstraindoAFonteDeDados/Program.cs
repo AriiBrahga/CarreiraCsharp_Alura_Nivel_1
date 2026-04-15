@@ -1,64 +1,67 @@
-﻿/*
-    Seja um aplicativo de gerenciamento de músicas onde os usuários podem organizar suas faixas favoritas em playlists personalizadas. Para cada playlist, é essencial que o usuário tenha controle total sobre a sequência de reprodução das músicas, permitindo reordená-las livremente a qualquer momento. Além disso, o aplicativo precisa oferecer a funcionalidade de reprodução aleatória para uma playlist específica, proporcionando uma experiência de audição dinâmica e variada, sem, contudo, alterar a ordem original que o usuário definiu. O desafio é criar uma estrutura robusta que suporte a adição e remoção eficiente de músicas, a reordenação flexível dentro das playlists e a seleção de faixas tanto em modo sequencial quanto aleatório.
+﻿using System.Collections;
 
-    Funções que vamos implementar:
-    //     [x] Criar as classes para musicas e playlist
-    //     [x] Listar músicas da playlist
-    //     [x] Adicionar música à playlist
-    //     [x] Obter uma música específica da playlist
-    //     [x] Remover música da playlist
-    //     [x] Tocar músicas da playlist em modo aleatório 
-    //     [x] Reordenar músicas segundo alguma lógica específica (ex. duração)
-    //     [x] Uma playlist não pode ter músicas repetidas
-    //     [x] Exibir as 10 músicas mais tocadas em todas as playlists (ranking)
-    //     [x] Player de música com:
-    //     [x] - Fila de reprodução (para músicas avulsas e/ou playlists)
-    //     [x] - Histórico de reprodução
+
+/*
+    Seja um arquivo com músicas em formato CSV (Comma Separated Values). 
+
+    Implemente as funções abaixo:
+    //     [x] Leia-o como uma coleção de músicas
+    //     [x] Filtre a coleção por artista (por ex. Coldplay, Metallica, AC/DC)
+    //     [x] Filtre a coleção por gênero (por ex. rock)
+    //     [x] Filtre a coleção por duração (por ex. maiores que 5 minutos)
+    //     [x] Ordene a coleção por artista
+    //     [x] Ordene a coleção por artista e em seguida por músicas com duração crescente
+    //     [ ] Crie uma coleção de artistas e suas músicas
+    //     [ ] Informe a duração média das músicas da coleção
+    //     [ ] Informe a duração total das músicas da coleção
+    //     [ ] Informe qual artista tem mais músicas na coleção
  
 */
 
-using System.Collections;
+using var stream = new FileStream("musicas.csv", FileMode.Open, FileAccess.Read);
+using var leitor = new StreamReader(stream);
 
-var rockNacional = new Playlist { Nome = "Músicas de Rock nacionais" };
+// a partir do yield, dos métodos de extensão, das expressões lambda
+// é possível compor funções para obter novas coleções
+// a partir de operações que manipulam coleções de entrada
 
-rockNacional.AdicionarMusica(
-    new Musica { Titulo = "Tempo Perdido", Artista = "Legião Urbana", Duracao = 4.55 },
-    new Musica { Titulo = "Pro Dia Nascer Feliz", Artista = "Barão Vermelho", Duracao = 3.45 },
-    new Musica { Titulo = "Eduardo e Mônica", Artista = "Legião Urbana", Duracao = 5.30 },
-    new Musica { Titulo = "Geração Coca-Cola", Artista = "Legião Urbana", Duracao = 3.50 },
-    new Musica { Titulo = "Geração Coca-Cola", Artista = "Legião Urbana", Duracao = 3.50 }
-);
+// isso permite separar a obtenção dos dados de origem
+// das operações que os manipulam
+var musicas = MusicasDoCsv(leitor)          // coleção de origem
+    .Where(m => m.Titulo.StartsWith('T'))   // operação de filtro
+    .OrderBy(m => m.Artista)                // operação de ordenação  
+    .ThenBy(m => m.Duracao);                // outra operação de ordenação  
 
-var playlistLegiaoUrbana = new Playlist { Nome = "Legião Urbana" };
-playlistLegiaoUrbana.AdicionarMusica(
-    new Musica { Titulo = "Eduardo e Mônica", Artista = "Legião Urbana", Duracao = 5.30 },
-    new Musica { Titulo = "Faroeste Caboclo", Artista = "Legião Urbana", Duracao = 9.30 },
-    new Musica { Titulo = "Que País É Este", Artista = "Legião Urbana", Duracao = 3.50 },
-    new Musica { Titulo = "Há Tempos", Artista = "Legião Urbana", Duracao = 4.20 }
-);
+// LINQ! Language Integrated Query
 
+int contador = 1;
+foreach (var musica in musicas)
+{
+    Console.WriteLine(musica);
+    if (contador >= 20) break;
+    contador++;
+}
 
-var player = new Player();
-player.Adicionar(new Musica { Titulo = "Bohemian Rhapsody", Artista = "Queen", Duracao = 5.55 });
-player.Adicionar(rockNacional);
-player.ExibirFila();
-player.ExibirHistorico();
-
-player.Tocar();
-player.ExibirFila();
-player.ExibirHistorico();
-
-player.Tocar();
-player.ExibirFila();
-player.ExibirHistorico();
-
-player.Voltar();
-player.ExibirFila();
-player.ExibirHistorico();
-
-player.Tocar();
-player.ExibirFila();
-player.ExibirHistorico();
+IEnumerable<Musica> MusicasDoCsv(StreamReader leitor)
+{
+    var linha = leitor.ReadLine();
+    //var numLinha = 1;
+    while (linha != null)
+    {
+        //Console.WriteLine($"\nProcessando linha {numLinha}...");
+        var partes = linha.Split(';');
+        if (partes.Length != 4) continue;
+        var musica = new Musica
+        {
+            Titulo = partes[0],
+            Artista = partes[1],
+            Duracao = Convert.ToInt32(partes[2])
+        };
+        yield return musica;
+        linha = leitor.ReadLine();
+        //numLinha++;
+    }
+}
 
 void TocarPlaylist(Playlist playlist)
 {
@@ -109,6 +112,35 @@ void ExibirMusicasMaisTocadas(params Playlist[] playlists)
 
 }
 
+bool MusicaPertenceAoColdplay(Musica musica)
+{
+    return musica.Artista == "Coldplay";
+}
+
+bool MusicaTemDuracaoMaiorQue5Minutos(Musica musica)
+{
+    return musica.Duracao > 300;
+}
+
+bool MusicaTituloComecaComLetraT(Musica musica)
+{
+    return musica.Titulo.StartsWith('T');
+}
+
+
+static class MusicaExtensions
+{
+    public static IEnumerable<Musica> FiltradasPor(this IEnumerable<Musica> musicas, Func<Musica, bool> condicao)
+    {
+        foreach (var musica in musicas)
+        {
+            // condição: função que, ao ser executada, retorna true/false
+            if (condicao(musica)) yield return musica;
+        }
+    }
+}
+
+
 class PorDuracaoComparer : IComparer<Musica>
 {
     public int Compare(Musica? x, Musica? y)
@@ -143,7 +175,7 @@ class Musica : IComparable<Musica>
 {
     public required string Titulo { get; set; }
     public required string Artista { get; set; }
-    public required double Duracao { get; set; }
+    public required int Duracao { get; set; }
 
     public int CompareTo(Musica? other)
     {
@@ -154,7 +186,7 @@ class Musica : IComparable<Musica>
 
     public override string ToString()
     {
-        return $"{Titulo} - {Artista} ({Duracao} min)";
+        return $"{Titulo} - {Artista} ({Duracao} seg)";
     }
 
     public override bool Equals(object? obj)
